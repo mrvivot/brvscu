@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Estudio BRVSCU</title>
+  
+    <!-- Bootstrap CSS (primero) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=PT+Serif:wght@400;700&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Inter:wght@400;500;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+    <!-- Tu CSS (después de Bootstrap para poder sobrescribir) -->
+    <link rel="stylesheet" href="styles.css">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  </head>
+
+
+
+<body>
+
+    <!-- === NAVBAR === -->
+<nav class="navbar navbar-expand-lg fixed-top custom-navbar shadow-sm px-custom">
+  <div class="container-fluid align-items-center justify-content-between">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/brvscu.png" alt="Berdaguer | Rojo Vivot | Silvero | Canziani | Uriburu - Abogados" />
+    </a>
+
+    <!-- Toggler para mobile -->
+    <button class="navbar-toggler ms-auto" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse navbar-collapse-mobile" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item px-2"><a class="nav-link" href="equipo.html">Nuestro equipo</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="areas.html">Áreas de práctica</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            🌐 ES
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="index.html">Español</a></li>
+            <li><a class="dropdown-item" href="index_en.html">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+
+<!-- === ÁREAS DE PRÁCTICA === -->
+
+   <section id="areas" class="practice-section py-5 px-custom  my-5" >
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="section-title mt-5 pt-5 mb-3">Áreas de práctica</h2>
+      <p class="section-intro mb-1">
+        En BRVSCU brindamos asesoramiento integral en las principales ramas del derecho empresarial, civil, comercial, laboral y penal. Nuestro equipo de especialistas interviene en operaciones complejas, litigios, reestructuraciones, contrataciones, defensa de la competencia, seguros, agronegocios y derecho del deporte. 
+      </p> 
+      <p class="section-intro mb-5">
+        A través de una práctica interdisciplinaria, acompañamos a empresas y particulares con soluciones jurídicas sólidas, estratégicas y ajustadas a cada necesidad.
+      </p>
+  
+      <div class="row g-3 mb-5 pb-5" data-aos="fade-up" data-aos-duration="1000">
+        <!-- Botones -->
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalContratos"><i class="bi bi-arrows-angle-contract px-2"></i>Contratos</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalSocietario"><i class="bi bi-collection px-2"></i>Societario</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalConcursal"><i class="bi bi-graph-up px-2"></i>Concursal</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalAdministrativo"><i class="bi bi-diagram-3-fill px-2"></i>Administrativo</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalLaboral"><i class="bi bi-person-workspace px-2"></i>Laboral</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalSeguros"><i class="bi bi-safe px-2"></i>Seguros</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalInmobiliario"><i class="bi bi-building px-2"></i>Inmobiliario</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalBancario"><i class="bi bi-bank px-2"></i>Bancario</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalFamilia"><i class="bi bi-people-fill px-2"></i>Familia y sucesiones</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalCompetencia"><i class="bi bi-shop px-2"></i>Defensa de la competencia</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalLitigios"><i class="bi bi-pen px-2"></i>Litigios y arbitrajes</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalRecupero"><i class="bi bi-credit-card-2-front px-2"></i>Recupero de créditos</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalConsumidor"><i class="bi bi-bag px-2"></i>Defensa del consumidor</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalDeporte"><i class="bi bi-stopwatch px-2"></i>Derecho del deporte</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalAgronegocios"><i class="bi bi-briefcase px-2"></i>Agronegocios</button>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3"><button class="btn btn-cta-practica w-100" data-bs-toggle="modal" data-bs-target="#modalPenal"><i class="bi bi-buildings px-2"></i>Penal empresario</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALES -->
+<div class="modal fade" id="modalContratos" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+     <h2 class="modal-title">Contratos</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+  
+  <div class="modal-body">
+  <h4><strong>Diseño y gestión de contratos</strong></h4>
+  <ul>
+    <li>Estructuración estratégica de contratos para empresas y particulares.</li>
+    <li>Redacción, análisis, revisión y negociación contractual.</li>
+    <li>Modificación o finalización de contratos: rescisión, revocación y resolución.</li>
+  </ul>
+
+  <h4><strong>Contratos comerciales específicos</strong></h4>
+  <ul>
+    <li>Concesión, franquicia, shopping centers, agencias, fideicomisos, factoring y distribución.</li>
+    <li>Suministro, licencias, leasing, comodato y sublocación.</li>
+    <li>Mutuos, cesión de créditos, prenda de créditos y garantías reales.</li>
+  </ul>
+
+  <h4><strong>Contratos de garantía</strong></h4>
+  <ul>
+    <li>Fianza, cartas de recomendación o patrocinio.</li>
+    <li>Fianzas solidarias y beneficio de excusión.</li>
+  </ul>
+
+  <h4><strong>Contratos bancarios y financieros</strong></h4>
+  <ul>
+    <li>Depósito, cuenta corriente, préstamos, descuentos, apertura de crédito.</li>
+    <li>Caja de seguridad, custodia de títulos, garantías y tarjetas de crédito.</li>
+  </ul>
+
+  <h4><strong>Contratos asociativos</strong></h4>
+  <ul>
+    <li>Negocios en participación.</li>
+    <li>Agrupaciones de colaboración, uniones transitorias y consorcios de cooperación.</li>
+  </ul>
+
+  <h4><strong>Comercio nacional e internacional</strong></h4>
+  <ul>
+    <li>Asesoramiento en operaciones con cartas de porte, conocimientos de embarque, letras de cambio y créditos documentarios.</li>
+  </ul>
+
+  <h4><strong>Garantías y derechos reales</strong></h4>
+  <ul>
+    <li>Contratos hipotecarios y prendarios.</li>
+    <li>Cancelación y extinción de garantías reales.</li>
+  </ul>
+
+  <h4><strong>Sociedades comerciales</strong></h4>
+  <ul>
+    <li>Constitución, disolución y liquidación de sociedades.</li>
+  </ul>
+
+  <h4><strong>Locaciones y servicios</strong></h4>
+  <ul>
+    <li>Locación de obra, servicios y cosas.</li>
+    <li>Cesión, desalojo, cobro de facturas y conflictos contractuales.</li>
+  </ul>
+
+  <h4><strong>Compraventa</strong></h4>
+  <ul>
+    <li>Boleto de compraventa, permuta y cesión de derechos.</li>
+  </ul>
+      </div>  <!-- Acá termina el modal body-->
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalSocietario" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Derecho societario</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Constitución y organización societaria</strong></h4>
+        <ul>
+          <li>Constitución de sociedades.</li>
+          <li>Reformas y modificaciones estatutarias.</li>
+          <li>Asesoramiento en acuerdos de accionistas.</li>
+          <li>Aportes irrevocables para futuras suscripciones de acciones.</li>
+        </ul>
+
+        <h4><strong>Sociedades extranjeras</strong></h4>
+        <ul>
+          <li>Inscripción, nacionalización y apertura de sucursales.</li>
+          <li>Representación legal en Argentina.</li>
+          <li>Revisión de documentación proveniente del extranjero.</li>
+        </ul>
+
+        <h4><strong>Operaciones societarias complejas</strong></h4>
+        <ul>
+          <li>Compraventa de empresas.</li>
+          <li>Procesos de due diligence.</li>
+          <li>Fusiones y escisiones de sociedades.</li>
+          <li>Cesión de cuotas sociales y compraventa de paquetes accionarios.</li>
+        </ul>
+
+        <h4><strong>Acuerdos empresariales</strong></h4>
+        <ul>
+          <li>Asesoramiento en acuerdos de colaboración empresaria.</li>
+          <li>Uniones transitorias de empresas (UTE), consorcios y joint ventures.</li>
+        </ul>
+
+        <h4><strong>Gestión y conflictos societarios</strong></h4>
+        <ul>
+          <li>Asesoramiento judicial y extrajudicial en conflictos societarios.</li>
+          <li>Impugnación y suspensión de resoluciones asamblearias.</li>
+          <li>Responsabilidad de administradores y directivos (acción social e individual).</li>
+          <li>Disolución y liquidación de sociedades comerciales.</li>
+        </ul>
+
+        <h4><strong>Auditoría y documentación</strong></h4>
+        <ul>
+          <li>Análisis de libros societarios y documentación contable-administrativa.</li>
+          <li>Auditorías externas.</li>
+          <li>Revisión de balances.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalConcursal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Derecho concursal</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Asesoramiento en crisis empresarial</strong></h4>
+        <ul>
+          <li>Acompañamiento legal a empresas en situación de insolvencia.</li>
+          <li>Evaluación de alternativas judiciales y extrajudiciales.</li>
+        </ul>
+
+        <h4><strong>Concurso preventivo</strong></h4>
+        <ul>
+          <li>Preparación y presentación del concurso preventivo.</li>
+          <li>Asesoramiento y representación legal durante todas las etapas del proceso.</li>
+          <li>Gestión de Acuerdos Preventivos Extrajudiciales.</li>
+        </ul>
+
+        <h4><strong>Representación de acreedores</strong></h4>
+        <ul>
+          <li>Asistencia en procesos de verificación de créditos.</li>
+          <li>Intervención en incidentes: verificación tardía, revisión, restitución de bienes, entre otros.</li>
+        </ul>
+
+        <h4><strong>Procesos de quiebra</strong></h4>
+        <ul>
+          <li>Preparación y/o defensa ante pedidos de quiebra.</li>
+          <li>Representación en etapas de levantamiento, avenimiento, acuerdo de pago, clausura y conclusión del procedimiento.</li>
+        </ul>
+
+        <h4><strong>Acuerdos preconcursales y concursales</strong></h4>
+        <ul>
+          <li>Negociación y formalización de acuerdos con acreedores antes o durante el proceso judicial.</li>
+        </ul>
+
+        <h4><strong>Garantías y créditos con respaldo real</strong></h4>
+        <ul>
+          <li>Ejecución de garantías hipotecarias y prendarias.</li>
+          <li>Cancelación de hipotecas.</li>
+          <li>Defensa de los derechos del acreedor y del deudor hipotecario en procesos concursales.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalAdministrativo" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Derecho administrativo</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Contratación pública</strong></h4>
+        <ul>
+          <li>Asesoramiento en procesos de licitación pública y concursos integrales.</li>
+          <li>Preparación, presentación y seguimiento de ofertas.</li>
+          <li>Participación en concursos bajo iniciativa privada.</li>
+        </ul>
+
+        <h4><strong>Concesiones de obras y servicios públicos</strong></h4>
+        <ul>
+          <li>Asistencia en la redacción, negociación y gestión de contratos de concesión.</li>
+          <li>Control del cumplimiento contractual y redeterminación de precios.</li>
+          <li>Renegociación de contratos con el Estado.</li>
+        </ul>
+
+        <h4><strong>Gestión y reclamos ante el Estado</strong></h4>
+        <ul>
+          <li>Acompañamiento en la ejecución de contratos administrativos.</li>
+          <li>Reclamaciones ante organismos públicos por incumplimientos contractuales.</li>
+          <li>Representación en instancias administrativas y judiciales.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalLaboral" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Derecho laboral</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Contratación y desvinculación laboral</strong></h5>
+        <ul>
+          <li>Contratos de trabajo, despidos y desvinculaciones.</li>
+          <li>Contratación y subcontratación de personal.</li>
+        </ul>
+
+        <h5><strong>Conflictos laborales individuales y colectivos</strong></h5>
+        <ul>
+          <li>Asesoramiento y representación en conflictos laborales ante SECLO, Ministerio de Trabajo y en sede judicial.</li>
+          <li>Defensa de empresas y directivos ante denuncias administrativas por presunto incumplimiento de normas laborales (registración, salud y seguridad).</li>
+          <li>Atención de reclamos por accidentes e infortunios laborales.</li>
+        </ul>
+
+        <h5><strong>Relaciones sindicales</strong></h5>
+        <ul>
+          <li>Representación en negociaciones con asociaciones sindicales.</li>
+          <li>Redacción y gestión de convenios colectivos de trabajo.</li>
+          <li>Resolución de conflictos sindicales.</li>
+        </ul>
+
+        <h5><strong>Gestión preventiva</strong></h5>
+        <ul>
+          <li>Diseño e implementación de políticas de Recursos Humanos con enfoque preventivo.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalSeguros" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Seguros</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Coberturas y pólizas</strong></h4>
+        <ul>
+          <li>Seguros de Responsabilidad Civil, Caución, Mala Praxis Profesional, Incendio, Vida y Responsabilidad por Producto.</li>
+        </ul>
+
+        <h4><strong>Asistencia en siniestros</strong></h4>
+        <ul>
+          <li>Acompañamiento legal en procesos de liquidación de siniestros.</li>
+          <li>Negociación y gestión de acuerdos transaccionales: extrajudiciales, en mediación y en juicio.</li>
+        </ul>
+
+        <h4><strong>Representación judicial</strong></h4>
+        <ul>
+          <li>Defensa y representación de aseguradoras y asegurados ante tribunales judiciales.</li>
+        </ul>
+
+        <h4><strong>Auditoría y análisis de riesgo</strong></h4>
+        <ul>
+          <li>Auditorías de cartera de juicios.</li>
+          <li>Estimación del riesgo judicial y evaluación de montos comprometidos.</li>
+          <li>Análisis de responsabilidad civil del asegurado.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalInmobiliario" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Derecho inmobiliario y de la construcción</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Desarrollos inmobiliarios</strong></h4>
+        <ul>
+          <li>Estructuración legal de proyectos inmobiliarios: edificios, barrios cerrados, clubes de campo.</li>
+          <li>Contratos para el desarrollo de emprendimientos: financiamiento, hipotecas y ejecuciones.</li>
+          <li>Asesoramiento en licitaciones públicas y privadas para proyectos inmobiliarios.</li>
+        </ul>
+
+        <h4><strong>Fideicomisos</strong></h4>
+        <ul>
+          <li>Redacción y estructuración de contratos de fideicomiso inmobiliario.</li>
+        </ul>
+
+        <h4><strong>Contratos de construcción</strong></h4>
+        <ul>
+          <li>Contratos de construcción, proyecto de obra y dirección de obra.</li>
+          <li>Uniones Transitorias de Empresas (UTEs) para la gestión de desarrollos inmobiliarios.</li>
+        </ul>
+
+        <h4><strong>Operaciones inmobiliarias</strong></h4>
+        <ul>
+          <li>Compraventa, permuta y locación de inmuebles rurales, urbanos e industriales.</li>
+          <li>Contratos de locación de obra y de servicios.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalBancario" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Derecho bancario</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Contratos bancarios</strong></h4>
+        <ul>
+          <li>Depósito, cuenta corriente, préstamo, descuento bancario y apertura de crédito.</li>
+          <li>Caja de seguridad, custodia de títulos y garantías bancarias.</li>
+          <li>Mutuo, cesión de créditos y prenda de créditos.</li>
+        </ul>
+
+        <h4><strong>Tarjetas de crédito</strong></h4>
+        <ul>
+          <li>Asesoramiento y representación en conflictos vinculados a tarjetas de crédito.</li>
+        </ul>
+
+        <h4><strong>Datos financieros (Habeas Data)</strong></h4>
+        <ul>
+          <li>Reclamos por acceso, rectificación, actualización o cancelación de datos personales en registros financieros.</li>
+        </ul>
+
+        <h4><strong>Responsabilidad bancaria</strong></h4>
+        <ul>
+          <li>Inclusión indebida en bases de datos de deudores.</li>
+          <li>Usurpación de identidad.</li>
+          <li>Daños y perjuicios por acciones u omisiones de entidades bancarias.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalAgronegocios" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Agronegocios</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Estructuración legal para el sector agropecuario</strong></h4>
+        <ul>
+          <li>Diseño e implementación de estructuras jurídicas para el desarrollo del sector.</li>
+          <li>Asesoramiento en derecho societario y gobierno corporativo.</li>
+          <li>Planificación y estructuración impositiva.</li>
+        </ul>
+
+        <h4><strong>Alianzas, fusiones y reorganizaciones</strong></h4>
+        <ul>
+          <li>Joint ventures, transferencias de fondos de comercio y reorganizaciones empresariales.</li>
+          <li>Realización y coordinación de procesos de due diligence.</li>
+        </ul>
+
+        <h4><strong>Gestión laboral en el agro</strong></h4>
+        <ul>
+          <li>Análisis de contingencias laborales específicas del sector.</li>
+          <li>Resolución de litigios vinculados a distribuidores y agentes.</li>
+        </ul>
+
+        <h4><strong>Cumplimiento normativo y trámites regulatorios</strong></h4>
+        <ul>
+          <li>Asesoramiento en cuestiones regulatorias del sector agropecuario.</li>
+          <li>Representación ante organismos como el Ministerio de Agroindustria y el INASE.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalCompetencia" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Defensa de la competencia</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Asesoramiento y cumplimiento normativo</strong></h4>
+        <ul>
+          <li>Asistencia legal en actuaciones ante la Comisión Nacional de Defensa de la Competencia.</li>
+          <li>Implementación de programas de cumplimiento normativo.</li>
+        </ul>
+
+        <h4><strong>Operaciones de concentración</strong></h4>
+        <ul>
+          <li>Asesoramiento, tramitación y obtención de autorizaciones ante la autoridad de control.</li>
+          <li>Fusiones, adquisiciones y análisis de impacto competitivo.</li>
+        </ul>
+
+        <h4><strong>Auditorías y due diligence</strong></h4>
+        <ul>
+          <li>Realización de auditorías legales (due diligence) en operaciones nacionales y regionales.</li>
+          <li>Coordinación y revisión de auditorías en procesos de concentración económica.</li>
+        </ul>
+
+        <h4><strong>Defensa en procedimientos</strong></h4>
+        <ul>
+          <li>Representación en sumarios administrativos, procesos judiciales y recursos contra resoluciones de la autoridad.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalLitigios" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Asuntos contenciosos y responsabilidad civil</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Responsabilidad civil y daños</strong></h4>
+        <ul>
+          <li>Asesoramiento y litigio por responsabilidad civil: precontractual, contractual y extracontractual.</li>
+          <li>Responsabilidad profesional: mala praxis médica, legal u otras.</li>
+          <li>Responsabilidad por accidentes de tránsito, laborales o deportivos.</li>
+          <li>Responsabilidad por productos: productores, fabricantes, distribuidores y transportistas.</li>
+          <li>Casos de evicción y vicios ocultos.</li>
+        </ul>
+
+        <h4><strong>Conflictos contractuales y fiduciarios</strong></h4>
+        <ul>
+          <li>Juicios civiles y comerciales vinculados a contratos y obligaciones.</li>
+          <li>Fideicomisos: incumplimientos, responsabilidades y derechos de fiduciantes, fiduciarios, beneficiarios y terceros.</li>
+        </ul>
+
+        <h4><strong>Métodos de resolución de conflictos</strong></h4>
+        <ul>
+          <li>Negociación, mediación, arbitraje y otros métodos alternativos.</li>
+          <li>Arbitrajes nacionales e internacionales.</li>
+          <li>Ejecución de sentencias y laudos arbitrales.</li>
+        </ul>
+
+        <h4><strong>Gestión y prevención de conflictos</strong></h4>
+        <ul>
+          <li>Auditorías legales preventivas.</li>
+          <li>Modelo de gestión propio que permite administrar de forma eficiente grandes volúmenes de casos judiciales y extrajudiciales.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalRecupero" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Recupero de créditos</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Gestión de cobros y ejecución de créditos</strong></h4>
+        <ul>
+          <li>Cobros ejecutivos y ordinarios en moneda local.</li>
+          <li>Seguimiento de deudores y negociación para la recuperación de créditos.</li>
+          <li>Medidas cautelares y acuerdos de refinanciación de deuda.</li>
+          <li>Cobro por cesión de créditos y títulos de crédito (cheques, pagarés, letras, facturas de crédito, etc.).</li>
+        </ul>
+
+        <h4><strong>Recupero en contratos comerciales</strong></h4>
+        <ul>
+          <li>Reclamos por compraventa, locación de servicios y de obra.</li>
+          <li>Saldo deudor en cuenta corriente bancaria.</li>
+          <li>Secuestros prendarios.</li>
+        </ul>
+
+        <h4><strong>Créditos garantizados</strong></h4>
+        <ul>
+          <li>Ejecución de créditos con garantía real (hipoteca, prenda) y personal.</li>
+        </ul>
+
+        <h4><strong>Auditoría y monitoreo</strong></h4>
+        <ul>
+          <li>Auditoría legal y análisis periódico de la cartera.</li>
+          <li>Estimación de capacidad de recupero.</li>
+          <li>Informes mensuales con estado de avance, segmentación y diagnóstico.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalConsumidor" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Defensa del consumidor</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Prevención de conflictos y cumplimiento normativo</strong></h4>
+        <ul>
+          <li>Asesoramiento en prevención de conflictos con consumidores.</li>
+          <li>Redacción de contratos de adhesión y condiciones generales.</li>
+          <li>Diseño legal de sorteos y promociones: términos y condiciones.</li>
+        </ul>
+
+        <h4><strong>Derechos del consumidor</strong></h4>
+        <ul>
+          <li>Deber de información, publicidad engañosa y ofertas masivas.</li>
+          <li>Reclamaciones por productos defectuosos, vicios redhibitorios y evicción.</li>
+          <li>Incumplimientos contractuales y defensa ante reclamos judiciales.</li>
+        </ul>
+
+        <h4><strong>Procesos y representación</strong></h4>
+        <ul>
+          <li>Representación en procesos colectivos (acciones de clase).</li>
+          <li>Negociaciones y acuerdos con consumidores y asociaciones.</li>
+          <li>Atención y representación ante autoridades de aplicación.</li>
+          <li>Impugnación judicial de decisiones administrativas.</li>
+        </ul>
+
+        <h4><strong>Auditoría legal preventiva</strong></h4>
+        <ul>
+          <li>Análisis de riesgos y cumplimiento normativo.</li>
+          <li>Revisión de procesos, documentación y comunicaciones.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalDeporte" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Derecho del deporte</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Contratos y representación legal</strong></h4>
+        <ul>
+          <li>Negociación de contratos con clubes, representantes y sponsors.</li>
+          <li>Asesoramiento legal a jugadores, profesionales y agentes.</li>
+          <li>Elaboración y gestión de contratos publicitarios y de sponsorización.</li>
+        </ul>
+
+        <h4><strong>Derechos y licencias deportivas</strong></h4>
+        <ul>
+          <li>Cesión de derechos televisivos, licencias y marketing deportivo.</li>
+          <li>Asistencia legal en actividades vinculadas al espectáculo deportivo.</li>
+        </ul>
+
+        <h4><strong>Intervención ante organismos deportivos</strong></h4>
+        <ul>
+          <li>Representación ante organismos nacionales e internacionales del deporte.</li>
+        </ul>
+
+        <h4><strong>Gestión de crisis e insolvencia</strong></h4>
+        <ul>
+          <li>Asistencia legal ante la insolvencia de entidades deportivas.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalFamilia" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Familia y sucesiones</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Asesoramiento familiar y resolución de conflictos</strong></h4>
+        <ul>
+          <li>Resolución de controversias familiares.</li>
+          <li>Reestructuración de empresas familiares y fundaciones.</li>
+        </ul>
+
+        <h4><strong>Planificación y transmisión hereditaria</strong></h4>
+        <ul>
+          <li>Planificación sucesoria.</li>
+          <li>Redacción de testamentos, donaciones en vida y particiones en vida.</li>
+          <li>Planificación de la transmisión del patrimonio hereditario.</li>
+        </ul>
+
+        <h4><strong>Procesos sucesorios y conflictos</strong></h4>
+        <ul>
+          <li>Tramitación de juicios sucesorios: testamentarios y ab-intestato.</li>
+          <li>Conflictos entre herederos y con acreedores de la sucesión.</li>
+          <li>Redacción y negociación de acuerdos particionarios.</li>
+        </ul>
+
+        <h4><strong>Acciones vinculadas a la herencia</strong></h4>
+        <ul>
+          <li>Petición de herencia.</li>
+          <li>Acción de reducción de donaciones inoficiosas.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalPenal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h2 class="modal-title">Penal empresario</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+
+        <h4><strong>Delitos económicos y conflictos societarios</strong></h4>
+        <ul>
+          <li>Litigios penales complejos en materia tributaria, aduanera, cambiaria y financiera.</li>
+          <li>Investigaciones por fraudes y conflictos societarios.</li>
+        </ul>
+
+        <h4><strong>Corrupción, lavado de activos y cooperación internacional</strong></h4>
+        <ul>
+          <li>Procesos por corrupción y blanqueo de capitales.</li>
+          <li>Asistencia en cooperación internacional y extradición.</li>
+        </ul>
+
+        <h4><strong>Asesoría institucional</strong></h4>
+        <ul>
+          <li>Asesoramiento a organismos gubernamentales, tanto nacionales como internacionales.</li>
+        </ul>
+
+        <h4><strong>Compliance y prevención penal</strong></h4>
+        <ul>
+          <li>Diseño y auditoría de programas de Compliance.</li>
+          <li>Capacitación a empresas en legislación penal local e internacional.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+  
+ <!-- Footer -->
+ <footer class="footer-section text-white text-center py-5">
+  <p class="mb-0">&copy; 2025 | Estudio Jurídico BRVSCU | Diseño y desarrollo por <a href="https://www.linkedin.com/in/mrvivot/">@mrvivot</a></p>
+</footer>
+
+<!-- Bootstrap JS bundle (con Popper). Usá la MISMA versión que el CSS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- (Opcional) tu JS propio, después del bundle -->
+<script src="js/main.js"></script>
+
+
+ <!-- AOS  -->
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script>
+   AOS.init();
+ </script>
+ 
+
+</body>
+

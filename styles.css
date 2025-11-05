@@ -191,11 +191,6 @@ body {
   flex-wrap: nowrap;
 }
 
-/* Logo: tamaño cómodo en desktop */
-.navbar-brand img {
-  max-height: 64px;
-  width: auto;
-}
 
 /* Toggler sin borde “feíto” */
 .navbar-toggler { 

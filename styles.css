@@ -10,7 +10,7 @@ body {
   }
 
   
-  h1, h2, h3, h4, .navbar, .section-title {
+  h1,  h3, .navbar, .section-title {
     font-family: 'Merriweather', serif;
     font-weight: 700;
     color: #000;
@@ -71,9 +71,6 @@ body {
 }
 
 
-
-
-
 .btn-cta-practica {
   display: inline-block;
   width: 100%;
@@ -81,30 +78,28 @@ body {
   font-size: 1rem;
   font-weight: 500;
   color: #892A2A;
-  background-color: #ffffff;
-  border: none;
+  background-color: #fff;
+  border: 1px solid #eee;      /* ✅ borde sutil para contraste y foco */
   border-radius: 8px;
   padding: 0.75rem 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: all 0.25s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   cursor: pointer;
 }
 
-/* Hover y focus */
 .btn-cta-practica:hover,
 .btn-cta-practica:focus {
   transform: translateY(-3px);
-  box-shadow: 0 6px 14px #00000026;
-  background-color: #f8f8f8; /* leve cambio para sensación de profundidad */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  background-color: #f8f8f8;
   color: #892a2a;
   text-decoration: none;
   outline: none;
 }
 
-/* Active (clic sostenido) */
-.btn-cta-practica:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+.btn-cta-practica:focus-visible {
+  outline: 2px solid #892A2A;  /* ✅ foco accesible real */
+  outline-offset: 2px;
 }
 
 /* Opcional: versión responsive */
@@ -126,7 +121,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: initial;
-    padding: 0 100px;
     position: fixed;
     top: 0;
     left: 0;
@@ -140,14 +134,14 @@ body {
   display: flex;
   align-items: center;
   margin-right: auto;
-  padding: 0.25rem 0;
+  padding: 0.5rem 0;
  }
     
 
   .navbar .navbar-brand img {
     display: block;
     height: auto;
-    max-height: 64px;
+    max-height: 72px;
     width: auto;
     object-fit: contain;
   }
@@ -205,7 +199,7 @@ body {
 /* MOBILE (≤992px): menos padding y logo más chico para que quepa todo en una fila */
 @media (max-width: 991.98px) {
   .navbar {
-    height: 80px;                    /* opcional: navbar más baja en mobile */
+    height: 88px;                    /* opcional: navbar más baja en mobile */
     padding: 0 16px;      /* reduce el px-custom en mobile */
   }
   .navbar-brand img {
@@ -287,9 +281,9 @@ body {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.45) 0%,
-    rgba(0, 0, 0, 0.25) 45%,
-    rgba(0, 0, 0, 0.10) 100%
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.45) 45%,
+    rgba(0, 0, 0, 0.25) 100%
   );
   z-index: 2;
 }
@@ -308,7 +302,7 @@ body {
 #hero .hero-title {
 font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
-  font-size: clamp(2.2rem, 4.5vw, 4rem);
+  font-size: clamp(3.2rem, 4.5vw, 5rem);
   line-height: 1.1;
   letter-spacing: 0.2px;
   color: #fafafa;
@@ -374,10 +368,10 @@ font-family: 'Times New Roman', Times, serif;
 /* ==== CTA BAND mejorada ==== */
 .band-cta {
   position: relative;
-  background: black;
+
   padding-block: clamp(2rem, 4vw, 4rem);
   border-top: 4px solid #892A2A; /* acento de marca */
-  border-bottom: 4px solid #892A2A;
+ 
   overflow: hidden;
 }
 
@@ -393,7 +387,7 @@ font-family: 'Times New Roman', Times, serif;
 
 .band-cta__inner {
   display: flex;
-  align-items:center; /* 🔹 centra verticalmente h3 y el botón */
+  align-items:baseline; /* 🔹 centra verticalmente h3 y el botón */
   justify-content: space-between; /* o space-between si querés separarlos */
   gap: 2rem; /* espacio entre el texto y el botón */
   flex-wrap: wrap; /* permite que se apilen en mobile */
@@ -503,55 +497,62 @@ font-family: 'Times New Roman', Times, serif;
   
 
 
+/* === Cards Socios optimizadas === */
 
-/* Sección de Socios */
+#socios .row.g-4 > [class*="col-"] {
+  display: flex;
+  align-items: stretch;
+  contain: layout; /* aísla el cálculo de layout */
+}
 
- /* Grilla: cada col estira la card a la misma altura */
-#socios .row.g-4 > [class*="col-"] { display: flex; }
-
-/* Card socio */
 .card-socio {
-  border: 0;
+  position: relative;
+  border: none;
   background: #fff;
-box-shadow: #FAFAFA;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   will-change: transform, box-shadow;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .card-socio:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Imagen consistente (sin altura fija en px) */
 .card-socio .card-img-top {
   width: 100%;
-  aspect-ratio: 4 / 5;      /* cambiá si preferís 3/4 o 1/1 */
+  aspect-ratio: 4/5;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
 }
 
-/* Body flexible */
+/* Sutil zoom de imagen */
+.card-socio:hover .card-img-top {
+  transform: scale(1.05);
+}
+
 .card-socio .card-body {
   display: flex;
   flex-direction: column;
   gap: .2rem;
-  padding: .75rem .75rem 1rem;
+  padding: .75rem 1rem 1rem;
   flex: 1;
 }
-
 
 .card-socio .card-title {
   font-size: 1.05rem;
   line-height: 1.25;
   margin: .25rem 0 .15rem;
-  display: -webkit-box;           /* necesario */
-  -webkit-box-orient: vertical;   /* necesario */
-  overflow: hidden;               /* oculta el texto extra */
-  min-height: calc(1.25em * 2);   /* reserva visual para 2 líneas */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(1.25em * 2);
 }
-
 
 .card-socio .card-subtitle {
   font-size: .95rem;
@@ -559,99 +560,23 @@ box-shadow: #FAFAFA;
   margin: 0;
 }
 
-/* Menos motion si el usuario lo pide */
+/* Reduce motion setting */
 @media (prefers-reduced-motion: reduce) {
   .card-socio { transition: none; }
-  .card-socio:hover { transform: none; }
+  .card-socio:hover { transform: none; box-shadow: none; }
 }
-  
 
 
 
 
 
 
-/* Sección de Prácticas */
-  .areas-practica {
-  
-    background-color: #fff  ;
-    padding: 8rem 100px;
-    
-  }
-  
-  .contenedor-practica {
-    max-width: 100%;
-  }
-  
-  .fila-superior h2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-  
-  .descripcion-practica {
-    text-align: left;
-    margin-bottom: 80px;
-    font-size:1.2rem;
-  }
-  
-  
-  .descripcion-practica .columna {
-    flex: 1;
-    font-family: 'Merriweather', serif;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  .fila-inferior .grid-practicas {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-  }
-  
-  .practica-card {
-    text-decoration: none;
-    padding: 0.5rem 0;
-    transition: all 0.3s ease;
-    color: #000;
-    align-content: center;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    
-  }
-  
-  .practica-card h3 {
-    font-size: 1.2rem;
-    margin: 0;
-    color: #000;
-    transition: color 0.3s ease;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-
-  
-  .practica-card:hover {
-    color: #892A2A;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(113, 8, 8, 0.1);
-  }
-  
-  .practica-card:hover h3 {
-    color: #892A2A;
-  
-  }
   
   
 
 
  
-  
-  .modal-body li {
-    font-size: 0.9rem;
-  }
+
   
 /* CONTACTO */
 .contacto-section { 
@@ -703,8 +628,16 @@ box-shadow: #FAFAFA;
 
 
 /* Mantener consistencia de márgenes laterales (usa tu px-custom global) */
-.px-custom { padding-left: 100px; padding-right: 100px; }
-@media (max-width: 991.98px) { .px-custom { padding-left: 20px; padding-right: 20px; } }
+.px-custom { 
+  padding-left: 100px; 
+  padding-right: 100px; 
+}
+
+@media (max-width: 991.98px) { 
+  .px-custom { 
+    padding-left: 20px; padding-right: 20px; 
+  } 
+}
 
 
   
@@ -727,10 +660,7 @@ box-shadow: #FAFAFA;
     font-size: 0.85rem;
   }
 
-  .px-custom {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+
 }
 
 
@@ -770,10 +700,25 @@ footer {
   max-height: 90vh; /* mantiene visible el encabezado */
 }
 
+
+
+
 .modal-body {
   overflow-y: auto;
   padding-right: 1rem;
   font-family: 'Times New Roman', Times, serif;
+}
+
+  
+.modal-body ul {
+  margin-bottom: 1.25rem;
+}
+
+.modal-body li {
+  margin-bottom: .35rem;   /* micro ritmo */
+  line-height: 1.6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9rem;
 }
 
 /* Responsive: quita sticky en mobile */
@@ -812,4 +757,106 @@ footer {
   font-size: 0.9rem;
   color: #666666;
   font-weight: 300;
+}
+
+
+/* ===== SECCIÓN PUBLICACIONES ===== */
+.publicaciones {
+  background-color: #fafafa;
+  padding-block: clamp(3rem, 5vw, 5rem);
+}
+
+.publicaciones .section-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: #000;
+}
+
+.publicaciones .section-intro {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #333;
+ 
+}
+
+/* === CARD DE PUBLICACIÓN === */
+.card-publicacion {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-publicacion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.card-publicacion .card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-publicacion .card-body {
+  padding: 1rem;
+}
+
+.card-publicacion .card-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.card-publicacion .card-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Botón de descarga */
+.btn-cta-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #892A2A;
+  background-color: #fff;
+  border: 2px solid #892A2A;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.btn-cta-download:hover {
+  background-color: #892A2A;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .card-publicacion .card-img-top {
+    height: 160px;
+  }
+  .card-publicacion .card-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .publicaciones .section-intro {
+    font-size: 1rem;
+  }
+  .btn-cta-download {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.9rem;
+  }
 }

@@ -2,8 +2,8 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="Estudio jurídico BRVSCU. Asesoramiento legal para empresas y personas en civil, comercial, laboral, penal y más." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Estudio jurídico BRVSCU. Asesoramiento legal para empresas y personas en civil, comercial, laboral, penal y más." />
   <title>Berdaguer | Rojo Vivot | Silvero | Canziani | Uriburu - Abogados</title>
 
     <!-- Hreflang -->
@@ -29,41 +29,44 @@
 
 <body>
 <!-- === NAVBAR === -->
-<nav class="navbar navbar-expand-lg fixed-top custom-navbar shadow-sm px-custom">
-  <div class="container-fluid align-items-center justify-content-between">
-    <a class="navbar-brand" href="index.html">
-      <img src="images/brvscu.png" alt="Berdaguer | Rojo Vivot | Silvero | Canziani | Uriburu - Abogados" />
-    </a>
+  <!-- === NAVBAR === -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar shadow-sm px-custom">
+    <div class="container-fluid align-items-center justify-content-between">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/brvscu.png" alt="Berdaguer | Rojo Vivot | Silvero | Canziani | Uriburu - Abogados" />
+      </a>
+  
+      <!-- Toggler para mobile -->
+      <button class="navbar-toggler ms-auto" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse navbar-collapse-mobile" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item px-2"><a class="nav-link" href="equipo.html">Nuestro equipo</a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="areas.html">Áreas de práctica</a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="publicaciones.html">Publicaciones</a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="contacto.html">Contacto</a></li>
 
-    <!-- Toggler para mobile -->
-    <button class="navbar-toggler ms-auto" type="button"
-            data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Menú">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse navbar-collapse-mobile" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item px-2"><a class="nav-link" href="equipo.html">Nuestro equipo</a></li>
-        <li class="nav-item px-2"><a class="nav-link" href="areas.html">Áreas de práctica</a></li>
-        <li class="nav-item px-2"><a class="nav-link" href="contacto.html">Contacto</a></li>
-        <li class="nav-item dropdown px-2">
-          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            🌐 ES
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-            <li><a class="dropdown-item" href="index.html">Español</a></li>
-            <li><a class="dropdown-item" href="index_en.html">English</a></li>
-          </ul>
-        </li>
-      </ul>
+          <li class="nav-item dropdown px-2">
+  <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    🌐 ES
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+    <li><a class="dropdown-item" href="index.html">Español</a></li>
+    <li><a class="dropdown-item" href="index_en.html">English</a></li>
+  </ul>
+</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
 <!-- EQUIPO -->
 <section id="estudio" class="estudio">
-  <div class="container px-custom mt-5">
+  <div class="container mt-5 px-custom" data-aos="fade-up" data-aos-duration="1000" > 
     <div class="row mt-5 py-5">
       <div class="col-12">
         <h2 class="section-title mb-4">Nuestro equipo</h2>
@@ -77,7 +80,7 @@
   </div>
 </section>
 
-<!--CARDS SOCIOS-->
+<!--CARDS-->
 <section id="socios" class="py-3 my-3 px-custom">
   <div class="container">
     <!-- ⚠️ UNA SOLA ROW para todas las cards -->
@@ -111,7 +114,7 @@
         
             <!-- Columna derecha: scroll -->
             <div class="col-md-8 col-12 p-1">
-              <h2 class="pt-2 ">José Francisco Berdaguer</h2>
+              <h2 class="fw-bold pt-2 ">José Francisco Berdaguer</h2>
               <h4 class="fw-bold pb-3">Abogado | Especialista en contratos</h4>
               <p>Es abogado y escribano egresado de la Universidad Católica de Córdoba (1995 y 1996), y Magíster en Derecho Empresario por la Universidad Austral (1998).</p>
         
@@ -164,7 +167,7 @@
         
             <!-- Columna derecha: scroll -->
             <div class="col-md-8 col-12 p-1">
-              <h2 class="pt-2 ">Rómulo Rojo Vivot</h2>
+              <h2 class="pt-2 fw-bold">Rómulo Rojo Vivot</h2>
               <h4 class="fw-bold pb-3">Abogado</h4>
               <p>Rómulo Rojo Vivot es abogado especializado en Derecho Civil, Comercial y Concursal, con más de 15 años de experiencia brindando asesoramiento jurídico integral a empresas, startups y grupos familiares. 
               </p>
@@ -227,22 +230,23 @@
       
           <!-- Columna derecha: scroll -->
           <div class="col-md-8 col-12 p-1">
-            <h2 class="pt-2 ">Lucía Rojo Vivot</h2>
+            <h2 class="pt-2  fw-bold ">Lucía Rojo Vivot</h2>
             <h4 class="fw-bold pb-3">Abogada</h4>
-            <p>Lucía Rojo Vivot es abogada especializada en Derecho Empresarial, Comercial y de Defensa de la Competencia, con más de 20 años de experiencia asesorando a empresas nacionales y extranjeras.
+
+            
+            <p>Lucía Rojo Vivot es abogada especializada en Derecho Empresarial, Comercial y de Defensa de la Competencia, con más de 20 años de experiencia.
             </p>
-              <p>Egresada de la Universidad de Buenos Aires (UBA) en 2002, complementó su formación académica en el exterior con estudios en Constitutional Law en The New School University (Nueva York, 1999) y en Ashwell House Study Centre (Londres, 1996). Además, realizó un posgrado en Fideicomiso en Garantía (UBA, 2006).
+            <p>Su práctica profesional se centra en la redacción, revisión y negociación de contratos comerciales, la asesoría en operaciones de compraventa de empresas y la coordinación de procesos de due diligence.</p>
+            <p>Asimismo, interviene en litigios civiles, comerciales y administrativos, aportando una visión integral y estratégica. Posee amplia experiencia en la negociación, redacción y revisión de contratos comerciales, la asesoría en operaciones de compraventa de empresas y la coordinación de procesos de due diligence.
+            </p>
+
+            <p>
+              Ha formado parte de prestigiosos estudios jurídicos como Errecondo, González & Funes, Beccar Varela y Vitolo, además de haberse desempeñado en la Justicia Nacional en lo Civil.
+            </p>
+              
+            <p>Egresada de la Universidad de Buenos Aires (UBA) en 2002, complementó su formación académica en el exterior con estudios en Constitutional Law en The New School University (Nueva York, 1999) y en Ashwell House Study Centre (Londres, 1996). Además, realizó un posgrado en Fideicomiso en Garantía (UBA, 2006).
               </p>
-              <p>Su práctica profesional se centra en la redacción, revisión y negociación de contratos comerciales, la asesoría en operaciones de compraventa de empresas y la coordinación de procesos de due diligence.                           
-              </p>
-            <p>Posee amplia experiencia en Derecho de la Competencia, representando a compañías ante la autoridad de control y en instancias administrativas y judiciales. Asimismo, interviene en litigios civiles, comerciales y administrativos, aportando una visión integral y estratégica.
-            </p> 
-              <p>También brinda asesoramiento en derecho de familia y sucesorio, acompañando a particulares y grupos familiares en la planificación y resolución de conflictos patrimoniales.                            
-              </p>
-      
-            <p>Ha formado parte de prestigiosos estudios jurídicos como Errecondo, González & Funes, Beccar Varela y Vitolo, además de haberse desempeñado en la Justicia Nacional en lo Civil.</p>
-      
-           
+             
               <p>Es miembro del Colegio Público de Abogados de la Ciudad de Buenos Aires.                          
               </p>
       
@@ -294,7 +298,7 @@
     
         <!-- Columna derecha: scroll -->
         <div class="col-md-8 col-12 p-1">
-          <h2 class="pt-2 ">Emilio Rojo Vivot</h2>
+          <h2 class="pt-2  fw-bold">Emilio Rojo Vivot</h2>
           <h4 class="fw-bold pb-3">Abogado</h4>
           <p>Emilio Rojo Vivot es abogado especializado en Derecho Civil, Comercial y Laboral, con más de 15 años de experiencia en el asesoramiento jurídico integral a compañías de seguros, empresas y particulares.
           </p>
@@ -377,7 +381,7 @@ recupero de carteras de créditos.
                 
                     <!-- Columna derecha: scroll -->
                     <div class="col-md-8 col-12 p-1">
-                      <h2 class="pt-2 ">Germán Silvero</h2>
+                      <h2 class="pt-2  fw-bold">Germán Silvero</h2>
                       <h4 class="fw-bold pb-3">Abogado</h4>
                       <p>Roberto Germán Silvero es abogado especializado en Derecho Empresarial, Comercial y Laboral, con más de 25 años de trayectoria asesorando de forma integral a empresas nacionales e internacionales.
                       </p>
@@ -445,7 +449,7 @@ recupero de carteras de créditos.
                 
                     <!-- Columna derecha: scroll -->
                     <div class="col-md-8 col-12 p-1">
-                      <h2 class="pt-2 ">Carolina Canziani Aguilar</h2>
+                      <h2 class="pt-2  fw-bold">Carolina Canziani Aguilar</h2>
                       <h4 class="fw-bold pb-3">Abogada</h4>
                       <p>Carolina Canziani Aguilar es abogada especializada en Derecho Empresarial, Societario y Contratos Comerciales, con más de 20 años de experiencia en el asesoramiento jurídico integral a empresas nacionales y extranjeras.
                       </p>
@@ -515,7 +519,7 @@ recupero de carteras de créditos.
                 
                     <!-- Columna derecha: scroll -->
                     <div class="col-md-8 col-12 p-1">
-                      <h2 class="pt-2 ">Francisco Diego Uriburu</h2>
+                      <h2 class="pt-2  fw-bold ">Francisco Diego Uriburu</h2>
                       <h4 class="fw-bold pb-3">Abogado</h4>
                       <p>Francisco Diego Uriburu es abogado especializado en litigios y arbitrajes comerciales y civiles, con más de 25 años de experiencia en el asesoramiento jurídico y la representación de empresas nacionales e internacionales.
                       </p>
@@ -581,7 +585,7 @@ recupero de carteras de créditos.
                 
                     <!-- Columna derecha: scroll -->
                     <div class="col-md-8 col-12 p-1">
-                      <h2 class="pt-2 ">Julio Quinto Benites</h2>
+                      <h2 class="pt-2  fw-bold">Julio Quinto Benites</h2>
                       <h4 class="fw-bold pb-3">Abogado</h4>
                       <p>Julio Quinto Benites es abogado especializado en Derecho Empresarial, Bancario, Concursal y Societario, con más de 25 años de trayectoria en el asesoramiento jurídico a empresas nacionales, extranjeras y organismos del Estado.
                       </p>
@@ -652,7 +656,7 @@ recupero de carteras de créditos.
                   
                       <!-- Columna derecha: scroll -->
                       <div class="col-md-8 col-12 p-1">
-                        <h2 class="pt-2 ">Sebastián Eduardo Torres</h2>
+                        <h2 class="pt-2  fw-bold ">Sebastián Eduardo Torres</h2>
                         <h4 class="fw-bold pb-3">Abogado</h4>
                         <p>Sebastián Torres es abogado especializado en Derecho Empresarial, Societario y Contractual, con amplia experiencia en el asesoramiento integral a empresas nacionales e internacionales.
                         </p>
@@ -723,7 +727,7 @@ recupero de carteras de créditos.
               
                   <!-- Columna derecha: scroll -->
                   <div class="col-md-8 col-12 p-1">
-                    <h2 class="pt-2 ">Agustín Medrano</h2>
+                    <h2 class="pt-2  fw-bold">Agustín Medrano</h2>
                     <h4 class="fw-bold pb-3">Abogado</h4>
                     <p>Especialista en asesoramiento de personas y empresas en materia de
                       derecho administrativo: regulaciones nacionales y locales; contratos y
@@ -830,7 +834,7 @@ Completó diversos posgrados de especialización que consolidan su perfil técni
                 
                     <!-- Columna derecha: scroll -->
                     <div class="col-md-8 col-12 p-1">
-                      <h2 class="pt-2 ">Nicole Campos Arteaga</h2>
+                      <h2 class="pt-2  fw-bold ">Nicole Campos Arteaga</h2>
                       <h4 class="fw-bold pb-3">Abogada</h4>
                       <p>Abogada especializada en Derecho Societario, con experiencia en trámites ante la Inspección General de Justicia (IGJ) y en el asesoramiento jurídico integral a empresas y particulares.
                       </p>
@@ -863,7 +867,20 @@ Completó diversos posgrados de especialización que consolidan su perfil técni
             </div>
           </div>  <!-- cierra .row g-4 pb-5 -->
         </div>    <!-- cierra .container -->
-      </section>  <!-- cierra #socios -->
+      </section>
+
+<section class="px-custom">
+    <div class="row mt-5" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col-12">
+        <figure class="estudio-img-wrapper">
+          <img src="images/grupal.jpg" class="img-fluid rounded" alt="De izq. a der.: Agustín Medrano, Emilio Rojo Vivot, Lucía Rojo Vivot, Germán Silvero, Rómulo Rojo Vivot, Sebastián Eduardo Torres, Francisco Berdaguer, Francisco Diego Uriburu, Carolina Canziani Aguilar y Julio Quinto Benites">
+        </figure>
+      </div>
+    </div>
+    <div>
+      <p class="caption pb-5">De izq. a der.: Agustín Medrano, Emilio Rojo Vivot, Lucía Rojo Vivot, Germán Silvero, Rómulo Rojo Vivot, Sebastián Eduardo Torres, Francisco Berdaguer, Francisco Diego Uriburu, Carolina Canziani Aguilar y Julio Quinto Benites</p>
+    </div>
+  </section>
   
       <!-- Footer -->
       <footer class="footer-section text-white text-center py-5">

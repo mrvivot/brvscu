@@ -10,7 +10,7 @@ body {
   }
 
   
-  h1, h2, h3, .navbar, .section-title {
+  h1, h2, h3, .navbar {
     font-family: 'Merriweather', serif;
     font-weight: 700;
     color: #000;
@@ -475,14 +475,7 @@ font-family: 'Times New Roman', Times, serif;
 }
 
 /* Tipos tal como venías usando */
-.estudio .section-title {
 
-  font-weight: 700;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.1;
-  margin: 0 0 .75rem 0;
-  color: #000;
-}
 
 .estudio .section-intro {
 

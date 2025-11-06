@@ -205,6 +205,7 @@ body {
   .navbar-brand img {
     max-height: 32px;                /* achica el logo */
     width: auto;
+    height: auto;
   }
   .navbar .container-fluid {
     gap: .5rem;                      /* un poco de aire entre logo y toggler */
@@ -626,10 +627,12 @@ font-family: 'Times New Roman', Times, serif;
   padding-right: 100px; 
 }
 
-@media (max-width: 991.98px) { 
-  .px-custom { 
-    padding-left: 20px; padding-right: 20px; 
-  } 
+/* Afina padding en pantallas chicas */
+@media (max-width: 576px) {
+  .px-custom {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
 
 
@@ -852,5 +855,25 @@ footer {
   .btn-cta-download {
     font-size: 0.9rem;
     padding: 0.45rem 0.9rem;
+  }
+}
+
+
+/* Icono hamburguesa visible (color #892A2A sobre fondo claro) */
+.custom-navbar .navbar-toggler {
+  border: 0; /* opcional */
+}
+
+.custom-navbar .navbar-toggler-icon {
+  /* SVG inline para que no dependa de .navbar-light/.navbar-dark */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(137,42,42, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* Afina padding en pantallas chicas */
+@media (max-width: 576px) {
+  .px-custom {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 }
